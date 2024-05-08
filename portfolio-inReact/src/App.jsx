@@ -1,13 +1,20 @@
 import { Outlet } from  'react-router-dom';
-import  navTabs  from './components/navTabs.jsx';
+import NavTabs from './components/NavTabs.jsx';
+import 'bulma/css/bulma.min.css';
+import './App.css';
+
+
 
 function App() {
+  console.log("Rendering App");
   return (
-    <div className="App">
-      <navTabs />
-      <Outlet />
-    </div>
+    <>
+      <NavTabs /> 
+      <div>
+        <Outlet /> 
+      </div>
+    </>
   );
 }
 
-export default App
+export default App;

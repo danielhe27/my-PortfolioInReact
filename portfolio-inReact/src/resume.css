@@ -1,0 +1,77 @@
+.resume-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.contact-info {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.experience {
+  background-color: #222;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.position {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.company {
+  font-size: 20px;
+  color: #777;
+}
+
+.duration {
+  font-size: 18px;
+  color: #777;
+}
+
+.responsibilities,
+.projects {
+  margin-top: 15px;
+}
+
+.responsibilities h4,
+.projects h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.responsibilities ul,
+.projects ul {
+  padding-left: 20px;
+}
+
+.responsibilities li,
+.projects li {
+  font-size: 18px;
+  color: #aaa;
+}
