@@ -2,12 +2,12 @@ import React from 'react';
 
 const PortfolioPage = () => {
     const projects = [
-        { id: 1, title: 'PWA-WebFlow', description: 'Progressive web application', image: '../src/assets/pwa.jpeg', link: 'https://github.com/danielhe27/PWA-WebFlow' },
-        { id: 2, title: 'Blogspot-MVC', description: 'Model-View-Controller', image: '../src/assets/mvc.jpeg', link: 'https://github.com/danielhe27/blogspot-mvc' },
-        { id: 3, title: 'note-storage', description: 'Create and store notes', image: '../src/assets/notecreator.jpeg', link: 'https://github.com/danielhe27/note-storage' },
-        { id: 4, title: 'movie-decision-maker', description: 'Omdb Api helps with  choosing a movie  ', image: '../src/assets/movie-desicion.jpeg', link: 'https://github.com/danielhe27/movie-decision-maker/tree/main' },
-        { id: 5, title: 'ChronoSaver', description: 'Time management web application', image: '../src/assets/chronosaver.jpeg', link: 'https://github.com/danielhe27/chronosaver' },
-        { id: 6, title: 'web-based quiz application', description: 'trivia', image: '../src/assets/quiz.jpeg', link: 'https://github.com/danielhe27/SqueezyQuiz' },
+        { id: 1, title: 'PWA-WebFlow', description: 'Progressive web application', image: '../src/assets/project-images/pwa.jpeg', link: 'https://github.com/danielhe27/PWA-WebFlow' },
+        { id: 2, title: 'Blogspot-MVC', description: 'Model-View-Controller', image: '../src/assets/project-images/mvc.jpeg', link: 'https://github.com/danielhe27/blogspot-mvc' },
+        { id: 3, title: 'note-storage', description: 'Create and store notes', image: '../src/assets/project-images/notecreator.jpeg', link: 'https://github.com/danielhe27/note-storage' },
+        { id: 4, title: 'movie-decision-maker', description: 'Omdb Api helps with  choosing a movie  ', image: '../src/assets/project-images/movie-desicion.jpeg', link: 'https://github.com/danielhe27/movie-decision-maker/tree/main' },
+        { id: 5, title: 'ChronoSaver', description: 'Time management web application', image: '../src/assets/project-images/chronosaver.jpeg', link: 'https://github.com/danielhe27/chronosaver' },
+        { id: 6, title: 'web-based quiz application', description: 'trivia', image: '../src/assets/project-images/quiz.jpeg', link: 'https://github.com/danielhe27/SqueezyQuiz' },
     ];
 
     return (
