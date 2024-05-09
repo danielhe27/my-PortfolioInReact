@@ -1,6 +1,40 @@
 import React, { useState } from 'react';
 
+const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
 
+  const validateEmail = (email) => {
+    // Regular expression for validating email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    if (!value.trim()) {
+      setErrors({ ...errors, [name]: `${name} is required` });
+    } else {
+      setErrors({ ...errors, [name]: '' });
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    const { value } = e.target;
+    setEmail(value);
+    if (value.trim() && !validateEmail(value)) {
+      setErrors({ ...errors, email: 'Invalid email address' });
+    } else {
+      setErrors({ ...errors, email: '' });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic
+  };
 
   return (
     <div className="container">
