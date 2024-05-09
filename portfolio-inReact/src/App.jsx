@@ -2,6 +2,8 @@ import { Outlet } from  'react-router-dom';
 import NavTabs from './components/NavTabs.jsx';
 import 'bulma/css/bulma.min.css';
 import './App.css';
+import Footer from './components/footer.jsx';
+
 
 
 
@@ -13,6 +15,7 @@ function App() {
       <div>
         <Outlet /> 
       </div>
+      <Footer />
     </>
   );
 }

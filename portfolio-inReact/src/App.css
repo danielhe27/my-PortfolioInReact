@@ -1,10 +1,10 @@
 @import 'bulma/css/bulma.min.css';
 
 #root {
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  height: 100vh;
+  line-height: 5vh;
+
 }
 
 .logo {
@@ -44,6 +44,81 @@
 }
 
 body{
-  height: 100%;
   background-color: black;
 }
+
+.social-links a {
+  color: #7e8489; 
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.5s; /* Duration of the transition */
+  transition-property: color; /* Properties to transition */
+  margin: 17px;;
+
+}
+
+.social-links a:hover {
+  color: #ff9900; 
+}
+
+Footer{
+margin-top: 5vh;
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 18vh;
+}
+
+.card-image {
+  width: 100%;
+  height: 200%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card:hover .card-content-overlay {
+  opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 1rem; /* Padding around the navbar */
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-size: 1.5rem; /* Larger font size for the brand */
+}
+
+/* Navbar items */
+.navbar-item {
+  color: #fff; /* Light text color */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Navbar items hover */
+.navbar-item:hover {
+  background-color: #555; /* Darker background color on hover */
+}
+
+/* Active navbar item */
+.is-active {
+  background-color: #555; /* Darker background color for active item */
+}
+
