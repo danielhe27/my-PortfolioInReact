@@ -1,31 +1,31 @@
 import React from 'react';
-import '../resume.css'; // Import your CSS file for styling
+import '../resume.css'; 
 
 const Resume = () => {
     return (
         <div className="resume-container">
             <div className="header">
-                <h1 className="name">Your Name</h1>
-                <p className="contact-info">Your Address | Your Email | Your Phone Number</p>
+                <h1 className="name">Daniel Herrera</h1>
+                <p className="contact-info">Brooklyn, Ny| jdah49d@gmail.com</p>
             </div>
             <div className="section">
                 <h2 className="section-title">Professional Experience</h2>
                 <div className="experience">
                     <h3 className="position">Frontend Development Intern</h3>
                     <p className="company">Self-paced Learning | Remote</p>
-                    <p className="duration">January 2023 - November 2023</p>
+                    <p className="duration">December 2023 - June 2024</p>
                     <div className="responsibilities">
                         <h4>Responsibilities and Achievements:</h4>
                         <ul>
                             <li>Completed a comprehensive curriculum covering various aspects of web development, including HTML, CSS, JavaScript, and modern frontend frameworks like React.</li>
-                            {/* Add other responsibilities and achievements */}
+
                         </ul>
                     </div>
                     <div className="projects">
                         <h4>Project Highlights:</h4>
                         <ul>
                             <li>Led the development of a full-stack project management application using the MERN (MongoDB, Express.js, React, Node.js) stack, demonstrating end-to-end proficiency in web application development.</li>
-                            {/* Add other project highlights */}
+
                         </ul>
                     </div>
                 </div>

@@ -1,9 +1,9 @@
 @import 'bulma/css/bulma.min.css';
 
 #root {
-  padding: 2rem;
   text-align: center;
   line-height: 5vh;
+  min-height: 100vh; /* Minimum height of 100% viewport height */
 
 }
 
@@ -96,29 +96,28 @@ margin-top: 5vh;
 
 /* Navbar */
 .navbar {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Light text color */
-  padding: 1rem; /* Padding around the navbar */
+  background-color: #db1414;
+  color: #699a84;
+
 }
 
 /* Navbar brand */
 .navbar-brand {
-  font-size: 1.5rem; /* Larger font size for the brand */
+  font-size: 1.5rem; 
 }
 
 /* Navbar items */
 .navbar-item {
-  color: #fff; /* Light text color */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  color: #fff; 
+  transition: background-color 0.3s; 
 }
 
 /* Navbar items hover */
 .navbar-item:hover {
-  background-color: #555; /* Darker background color on hover */
+  background-color: #555; 
 }
 
 /* Active navbar item */
 .is-active {
-  background-color: #555; /* Darker background color for active item */
+  background-color: #555; 
 }
-
