@@ -15,14 +15,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      - run: npm install
-      - run: npm run build --if-present
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: portfolio-inReact  # This is the correct directory for your project
+
+      - name: Build project
+        run: npm run build --if-present
+        working-directory: portfolio-inReact  # Ensure it uses the project directory
+
       - name: Run tests
         run: npm run test
+        working-directory: portfolio-inReact  # Tests need to be run in the project directory as well
+
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
@@ -30,3 +40,4 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=build --prod
+        working-directory: portfolio-inReact  # Deployment should also use the project directory
