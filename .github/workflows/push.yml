@@ -16,27 +16,20 @@ jobs:
 
       - name: Set up Node.js 20.x
         uses: actions/setup-node@v3
-        with:
-          node-version: '20.x'
 
-      # Ensure npm install is run in the correct directory
-      - name: Install dependencies
-        run: npm install
 
-      # Ensure npm run build is run in the correct directory
-      - name: Build project
-        run: npm run build --if-present
 
-      # Ensure tests are run in the correct directory
+      - run: npm install
+      - run: npm run build --if-present
+
       - name: Run tests
         run: npm run test
 
-      # Ensure deployment is handled from the correct directory
-      - name: Deploy to Netlify
+      - name: Deploy to netlify
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=build --prod
-        working-directory: portfolio-inReact
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
