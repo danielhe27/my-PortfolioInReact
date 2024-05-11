@@ -1,23 +1,27 @@
+name: Build and Deploy
+
+# Define when the workflow should run
+on:
+  push:
+    branches: [main]  
+    branches: [main]  
+  workflow_dispatch:  
+
 jobs:
   deploy:
-    # Steps in job
+    runs-on: ubuntu-latest
     steps:
-      # Get code from repo
       - name: Checkout code
         uses: actions/checkout@v3
-      # Install NodeJS
       - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      # Run npm install and build on our code
       - run: npm install
       - run: npm run build --if-present
-      # Run Test
       - name: Run tests
         run: npm run test
-      # Deploy to Netlify using our production secrets
-      - name: Deploy to netlify
+      - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
