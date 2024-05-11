@@ -1,25 +1,38 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   deploy:
-    # Operating system to run job on
     runs-on: ubuntu-latest
-    # Steps in job
+
     steps:
-      # Get code from repo
+      # Step to check out the repository code
       - name: Checkout code
         uses: actions/checkout@v1
-      # Install NodeJS
+
+      # Step to set up Node.js version
       - name: Use Node.js 20.x
         uses: actions/setup-node@v1
         with:
           node-version: 20.x
-      # Run npm install and build on our code
+
+      # Step to install dependencies
       - run: npm install
+
+      # Step to build the project (if applicable)
       - run: npm run build --if-present
-      # Run Test
+
+      # Step to run tests
       - name: Run tests
         run: npm run test
-      # Deploy to Netlify using our production secrets
-      - name: Deploy to netlify
+
+      # Step to deploy the project to Netlify
+      - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
