@@ -1,8 +1,12 @@
-export default function Home() {
-  return( <div>
-    <h1>Home</h1>
-    <p>This is the home page.</p>
+import React from 'react';
+
+const ErrorPage = ({ errorCode, errorMessage }) => {
+  return (
+    <div className="error-page">
+      <h1>Error {errorCode}</h1>
+      <p>{errorMessage}</p>
     </div>
-    
-    );
-}
+  );
+};
+
+export default ErrorPage;
