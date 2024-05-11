@@ -3,8 +3,7 @@
 #root {
   text-align: center;
   line-height: 5vh;
-  min-height: 100vh; /* Minimum height of 100% viewport height */
-
+  min-height: 100vh; 
 }
 
 .logo {
@@ -37,6 +36,7 @@
 
 .card {
   padding: 2em;
+  height: 44vh;
 }
 
 .read-the-docs {
@@ -68,7 +68,7 @@ margin-top: 5vh;
 .card-image-container {
   position: relative;
   overflow: hidden;
-  height: 18vh;
+  height: 21vh;
 }
 
 .card-image {
@@ -96,7 +96,7 @@ margin-top: 5vh;
 
 /* Navbar */
 .navbar {
-  background-color: #db1414;
+  background-color: #847979;
   color: #699a84;
 
 }
@@ -120,4 +120,73 @@ margin-top: 5vh;
 /* Active navbar item */
 .is-active {
   background-color: #555; 
+}
+
+
+.container.is-fluid {
+  margin-top: 7vh;
+}
+
+@media print, screen and (min-width: 769px) {
+  .column.is-one-third, .column.is-one-third-tablet {
+      flex: none;
+      width: 46vh;
+      height: 55vh;
+  }
+}
+
+.card-content:last-child, .card-footer:last-child, .card-header:last-child {
+  border-end-end-radius: var(--bulma-card-radius);
+  border-end-start-radius: var(--bulma-card-radius);
+  margin-top: 5vh;
+}
+
+.experience {
+  background-color: #241;
+  border-radius: 11px;
+  margin-top: 13vh;
+  line-height: 8vh;
+}
+
+@media print, screen and (min-width: 769px) {
+  .column.is-6, .column.is-6-tablet {
+      flex: none;
+      width: calc(50% - var(--bulma-column-gap) / 2);
+      line-height: 10vh;
+      font-size:large;
+  }
+}
+
+.presentation {
+  margin-top: 110px;
+  margin-left: 5vh;
+}
+
+.skills {
+  margin-top: 80px;
+  margin-left: 5vh;
+  font-size: xx-large;
+}
+
+.image img {
+  display: block;
+  height: auto;
+  width: 100%;
+  margin-top: 15vh;
+}
+
+.skills-list{
+  line-height: 8vh;
+}
+
+p {
+  color: #debbe5;
+  font-size: xx-large;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+      display: block;
+      width: -webkit-fill-available;
+  }
 }

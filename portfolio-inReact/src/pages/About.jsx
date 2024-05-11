@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About() {
+const About = () => {
   return (
     <section className="section">
       <div className="container">
@@ -14,12 +14,13 @@ function About() {
             </figure>
           </div>
           <div className="column is-6">
-            <div className="content">
-              <h2 className="subtitle">Daniel Herrera</h2>
-              <p className="is-size-5">Full-Stack Developer | Based in Brooklyn, NY</p>
+            <div className="presentation">
+              <h2 className="subtitle"><strong>Daniel Herrera</strong></h2>
+              <p className="is-size-5"><strong>Full-Stack Developer | Based in Brooklyn, NY</strong></p>
               <p className="has-text-justified">Hello! I’m Daniel, originally from Venezuela and now residing in the USA for the past three years. With a background in economics and a rapid transition into technology, I blend analytical rigor with tech prowess. My passion for technology is matched by my enthusiasm for fitness and exploring the city on runs.</p>
-              
-              <h2 className="subtitle">Skills</h2>
+            </div>
+            <div className="skills">
+              <h2 className="subtitle"><strong>Skills</strong></h2>
               <ul className="skills-list">
                 <li>JavaScript, React</li>
                 <li>MySQL, MongoDB</li>
@@ -27,12 +28,14 @@ function About() {
                 <li>Strong Interpersonal Skills</li>
                 <li>Stress Management and Solution Finding</li>
               </ul>
-              <div className="content">
-                <p><strong>Experience:</strong> As a Junior Full-Stack Developer, I have developed and maintained robust web applications, handling both front and back-end tasks efficiently. I'm adept at working under pressure and finding solutions to complex problems.</p>
-                <p><strong>Hobbies:</strong> Dedicated to maintaining a healthy lifestyle through regular workouts and enjoying runs around the city which keep me energized and clear-minded.</p>
-              </div>
             </div>
           </div>
+            <div className="experience">
+              <p><strong>Experience:</strong> 
+              </p> <p>As a Junior Full-Stack Developer, I have developed and maintained robust web applications, handling both front and back-end tasks efficiently. I'm adept at working under pressure and finding solutions to complex problems.</p>
+              <p><strong>Hobbies:</strong> </p>
+              <p>Dedicated to maintaining a healthy lifestyle through regular workouts and enjoying runs around the city which keep me energized and clear-minded.</p>
+            </div>
         </div>
       </div>
     </section>
