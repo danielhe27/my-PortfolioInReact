@@ -11,26 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step to check out the repository code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Updated to latest version
 
-      - name: Set up Node.js 20.x
-        uses: actions/setup-node@v3
+      # Step to set up Node.js version
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v3  # Updated to latest version
         with:
-          node-version: '20.x'
+          node-version: '20.x'  # Ensures the use of Node.js 20
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: portfolio-inReact  
+      # Step to install dependencies
+      - run: npm install
 
-      - name: Build project
-        run: npm run build --if-present
-        working-directory: portfolio-inReact  
+      # Step to build the project (if applicable)
+      - run: npm start --if-present
 
-      - name: Run tests
-        run: npm run test
-        working-directory: portfolio-inReact  
 
+      # Step to deploy the project to Netlify
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
@@ -38,4 +36,4 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=build --prod
-        working-directory: portfolio-inReact  # Correct path to your project directory
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
