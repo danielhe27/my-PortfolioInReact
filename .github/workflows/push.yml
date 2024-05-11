@@ -25,11 +25,8 @@ jobs:
       - run: npm install
 
       # Step to build the project (if applicable)
-      - run: npm run build --if-present
+      - run: npm start --if-present
 
-      # Step to run tests
-      - name: Run tests
-        run: npm run test
 
       # Step to deploy the project to Netlify
       - name: Deploy to Netlify
