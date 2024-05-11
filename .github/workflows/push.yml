@@ -19,22 +19,18 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: portfolio-inReact  
 
-      - name: Build project
-        run: npm run build --if-present
-        working-directory: portfolio-inReact  
+      - run: npm install
+      - run: npm run build --if-present
+
       - name: Run tests
         run: npm run test
-        working-directory: portfolio-inReact  
 
-      - name: Deploy to Netlify
+      - name: Deploy to netlify
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=build --prod
-        working-directory: portfolio-inReact  
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
