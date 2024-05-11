@@ -23,15 +23,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: portfolio-inReact  # This is the correct directory for your project
+        working-directory: portfolio-inReact
 
       - name: Build project
         run: npm run build --if-present
-        working-directory: portfolio-inReact  # Ensure it uses the project directory
+        working-directory: portfolio-inReact
 
       - name: Run tests
         run: npm run test
-        working-directory: portfolio-inReact  # Tests need to be run in the project directory as well
+        working-directory: portfolio-inReact
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
@@ -40,4 +40,5 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           args: deploy --dir=build --prod
-        working-directory: portfolio-inReact  # Deployment should also use the project directory
+        run: echo "Deployment complete"
+        working-directory: portfolio-inReact
