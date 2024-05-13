@@ -12,7 +12,7 @@ const Resume = () => {
       </div>
 
       <p className="resume-link">
-        <a href="../src/assets/resume/resume.pdf" download>
+        <a href="/resume/resume.pdf" download>
           Download My Resume
           <FontAwesomeIcon icon={faDownload} className="ml-2" />
         </a>
