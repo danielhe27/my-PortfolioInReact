@@ -13,9 +13,9 @@ const About = () => {
           </div>
           {/* Image  */}
           <div className="column is-6">
-            <figure className="image is-328x228">
-              <img className="is-rounded about-image" src="/projec-images/Portfolio.jpeg" alt="Daniel Herrera" />
-            </figure>
+  <figure className="image is-328x228">
+    <img className="is-rounded about-image" src="/project-images/Portfolio.jpeg" alt="Daniel Herrera" />
+  </figure>
           </div>
           {/* Presentation and Skills column */}
           <div className="column is-6">
