@@ -24,7 +24,7 @@ The usage of this project is to serve as a digital portfolio that showcases my p
 ## Contributing
 Contributor: Daniel Herrera
 
-[Link to my deploy application on Netlify](https://drive.google.com/file/d/1pfh_MXurVwOgUhHII_QJ_QefwSvFuQYn/view?usp=sharing)
+[Link to my deploy application on Netlify](https://portfoliobywaris.netlify.app)
 
 ## Questions
 If you have any questions, please contact me:
