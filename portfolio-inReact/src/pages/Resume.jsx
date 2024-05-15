@@ -3,14 +3,17 @@ import '../resume.css';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// Resume component containing personal information, professional experience, education, and skills
 const Resume = () => {
   return (
     <div className="resume-container">
+      {/* Header section */}
       <div className="header">
         <h1 className="name">Daniel Herrera</h1>
         <p className="contact-info">Brooklyn, NY | jdah49d@gmail.com</p>
       </div>
 
+      {/* Download resume link */}
       <p className="resume-link">
         <a href="/resume/resume.pdf" download>
           Download My Resume
@@ -19,6 +22,7 @@ const Resume = () => {
       </p>
       
       <div className="container">
+        {/* Professional experience section */}
         <section className="section">
           <h2 className="title is-2">Professional Experience</h2>
           <div className="box">
@@ -35,11 +39,13 @@ const Resume = () => {
               <h4 className="title is-4">Project Highlights:</h4>
               <ul>
                 <li>Led the development of a full-stack project management application using the MERN stack.</li>
-                <li>Interactive Full-Stack Project </li>
+                <li>Interactive Full-Stack Project</li>
               </ul>
             </div>
           </div>
         </section>
+        
+        {/* Education section */}
         <section className="section">
           <h2 className="title is-2">Education</h2>
           <div className="box">
@@ -51,6 +57,8 @@ const Resume = () => {
             <p className="subtitle">La Universidad de los Andes, Venezuela | 2019</p>
           </div>
         </section>
+        
+        {/* Skills section */}
         <section className="section">
           <h2 className="title is-2">Skills</h2>
           <div className="tags are-medium">
