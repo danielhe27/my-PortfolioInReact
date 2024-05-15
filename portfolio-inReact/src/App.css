@@ -117,12 +117,6 @@ margin-top: 5vh;
   background-color: #555; 
 }
 
-/* Active navbar item */
-.is-active {
-  background-color: #555; 
-}
-
-
 .container.is-fluid {
   margin-top: 7vh;
 }
